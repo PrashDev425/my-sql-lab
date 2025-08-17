@@ -1,6 +1,8 @@
 # MySQL-Lab
 
-## Hierarchical / Tree View:
+## Hierarchical / Tree View :
+
+**school_db**
 
 ```
 +----------------------+
@@ -21,8 +23,9 @@
 ```
 > This shows the structure of the database and table
 
-## Table Schema [**students**]:
+## Table Schema:
 
+**students**
 | Column Name     | Data Type                         | Constraints                            |
 | --------------- | --------------------------------- | -------------------------------------- |
 | student_id      | ``INT``                           | PRIMARY KEY, AUTO_INCREMENT, NOT NULL  |
@@ -67,7 +70,7 @@
     - Find the oldest ``student`` 
     - Total students admitted each year
     - Total ``GPA`` by ``gender``
-    - Show only the full name and pass/fail result [ if **``(gpa >= 2.50)``** ``Pass`` ELSE ``Fail`` ]
+    - Show only the full name and pass/fail result [ if **``(gpa >= 2.50)``** ``Pass`` else ``Fail`` ]
 
 - **Update Table**
     - Update ``GPA`` for a student
