@@ -26,6 +26,7 @@
 ## Table Schema:
 
 **students**
+
 | Column Name     | Data Type                         | Constraints                            |
 | --------------- | --------------------------------- | -------------------------------------- |
 | student_id      | ``INT``                           | PRIMARY KEY, AUTO_INCREMENT, NOT NULL  |
@@ -38,6 +39,8 @@
 | gpa             | ``DECIMAL(3,2)``                  | CHECK (gpa BETWEEN 0.00 AND 4.00)      |
 
 ## Sample Data:
+
+**students**
 
 |student_id | first_name | last_name | gender | dob        | department       | admission_year | gpa  |
 |-----------|------------|-----------|--------|------------|------------------|----------------|------|
@@ -88,32 +91,3 @@
 - **Drop database**
 
 ---
-
-## Initial Setup:
-
-```sql
-CREATE DATABASE IF NOT EXISTS school_db;
-USE school_db;
-```
-
-```sql
-CREATE TABLE students (
-    student_id INT PRIMARY KEY AUTO_INCREMENT,
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL,
-    gender ENUM('Male','Female','Other') NOT NULL,
-    dob DATE NOT NULL,
-    department VARCHAR(100) NOT NULL,
-    admission_year INT NOT NULL,
-    gpa DECIMAL(3,2) CHECK (gpa >= 0.00 AND gpa <= 4.00)
-);
-
-INSERT INTO students (first_name, last_name, gender, dob, department, admission_year, gpa) 
-VALUES
-    ('Prakash', 'Shrestha', 'Male',   '2002-03-15', 'Computer Science', 2020, 3.75),
-    ('Sita', 'Shrestha', 'Female', '2001-07-22', 'Business', 2019, 3.60),
-    ('Prakash', 'Thapa', 'Male',   '2003-01-10', 'Engineering', 2021, 2.40),
-    ('Maya', 'Lama', 'Female', '2000-11-05', 'Computer Science', 2018, 3.85),
-    ('Aarav', 'KC', 'Male',   '2002-05-28', 'Arts', 2020, 3.20),
-    ('Nisha', 'Magar', 'Female', '2001-09-12', 'Engineering', 2019, 3.55);
-```
